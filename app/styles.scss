@@ -9,3 +9,9 @@
 @import "modules/slider";
 
 @import "pages/home";
+
+.hamburger-menu {
+  @include respond-to("small") {
+    display: none;
+  }
+}

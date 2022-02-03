@@ -1,5 +1,5 @@
 $breakpoints: (
-  "xsamll": (
+  "xsmall": (
     min-width: 415px,
   ),
   "small": (
@@ -27,4 +27,10 @@ $breakpoints: (
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
+}
+
+@mixin list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
