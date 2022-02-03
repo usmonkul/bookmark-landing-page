@@ -1,0 +1,24 @@
+.btn {
+  display: inline-block;
+  padding: 10px 2.4rem;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+}
+.btn-red {
+  color: $white;
+  background-color: $softRed;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.btn-darkblue {
+  background-color: $softBlue;
+  color: $white;
+}
+
+.btn-light {
+  background-color: lighten($grayishBlue, 35%);
+  color: $darkBlue;
+}
