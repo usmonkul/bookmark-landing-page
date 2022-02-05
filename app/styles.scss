@@ -10,6 +10,9 @@
 
 @import "pages/home";
 
+.main-content {
+  flex-grow: 1;
+}
 // Header
 .header-section {
   padding-top: 4.8rem;
@@ -37,6 +40,9 @@
     line-height: 17px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    &:hover {
+      color: $softRed;
+    }
   }
   .log-btn {
     color: $white;
@@ -101,42 +107,7 @@
     margin-bottom: 7.2rem;
   }
 }
-.features-list {
-  @include list-unstyled;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 73rem;
-  margin-bottom: 72px;
-  .features_l_item {
-    width: 24.3rem;
-    padding-bottom: 3.2rem;
-  }
-  .features_l_link {
-    font-size: 16px;
-    line-height: 17px;
-    letter-spacing: 0.533px;
-    color: $darkBlue;
-    opacity: 0.75;
-  }
-}
 
-.features-slider {
-  display: flex;
-  align-items: center;
-  .slider-img {
-    display: block;
-    width: 53.6rem;
-    height: 34.6rem;
-    margin-right: 12.5rem;
-  }
-  .slider-heading {
-    margin-bottom: 1.6rem;
-  }
-  .slider-text {
-    margin-bottom: 3.2rem;
-  }
-}
 // Download section
 .download-section {
   padding-top: 14rem;
@@ -283,18 +254,49 @@
 .contact-form {
   display: flex;
   align-items: center;
+  .input-email-wrapper {
+    position: relative;
+    width: 300px;
+    margin-right: 16px;
+  }
   .input-email {
     padding: 10px 20px;
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.25px;
     color: rgba(36, 42, 69, 0.350109);
-    width: 300px;
+    width: 100%;
     border-radius: 5px;
-    margin-right: 16px;
+    border: 2px solid transparent;
+    z-index: 10;
+  }
+  .error-message {
+    display: none;
+    padding: 8px 12px 6px 12px;
+    font-size: 10px;
+    line-height: 12px;
+    color: #fff;
+    letter-spacing: 0.25px;
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    background-color: $softRed;
+    position: absolute;
+    bottom: -44%;
+    left: 0;
+  }
+  .input-email:focus:valid {
+    border: 2px solid green;
+  }
+  .input-email:focus:invalid {
+    background: url(/img/icon-error.svg) no-repeat 95% 50% $white;
+    background-size: 25px;
+    border: 2px solid $softRed;
+  }
+  .input-email:focus:invalid ~ .error-message {
+    display: block;
   }
   .contact-btn {
-    border: none;
+    border: 2px solid $softRed;
   }
 }
 
@@ -329,6 +331,9 @@
     font-size: 13px;
     line-height: 17px;
     letter-spacing: 1.5px;
+    &:hover {
+      color: $softRed;
+    }
   }
 }
 .media-links-wrapper {
@@ -342,5 +347,9 @@
     display: block;
     width: 24px;
     height: 24px;
+    fill: #fff;
+    &:hover {
+      fill: $softRed;
+    }
   }
 }
