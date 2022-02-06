@@ -58,6 +58,17 @@
 .hero-section {
   padding-top: 18rem;
   padding-bottom: 10rem;
+  position: relative;
+}
+.hero-bg-decor {
+  width: 100rem;
+  height: 35.2rem;
+  background-color: $softBlue;
+  border-radius: 31.6rem;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% + 200px);
 }
 .hero-inner {
   display: flex;
@@ -92,7 +103,19 @@
 // Features
 
 .features-section {
-  padding: 10rem 0rem;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  position: relative;
+}
+.features-bg-decor {
+  width: 100rem;
+  height: 35.2rem;
+  background-color: $softBlue;
+  border-radius: 31.6rem;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: calc(50% + 15rem);
 }
 .feature-inner {
   display: flex;
@@ -110,7 +133,7 @@
 
 // Download section
 .download-section {
-  padding-top: 14rem;
+  padding-top: 10rem;
   padding-bottom: 5rem;
 }
 .download-inner {

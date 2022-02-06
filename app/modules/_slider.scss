@@ -16,6 +16,7 @@
     letter-spacing: 0.533px;
     color: $darkBlue;
     opacity: 0.75;
+    // cursor: pointer;
     position: relative;
     &:hover {
       color: $softRed;
@@ -29,12 +30,14 @@
     display: block;
     position: absolute;
     bottom: -3.9rem;
+    left: -40px;
   }
 }
 .features-slider {
   display: flex;
   align-self: flex-start;
   align-items: space-between;
+  min-height: 407px;
   .slider-content {
     width: 445px;
   }
@@ -43,12 +46,18 @@
   }
   .slider-img1 {
     margin-right: 12.5rem;
+    width: 53.6rem;
+    height: 34.6rem;
   }
   .slider-img2 {
     margin-right: 19rem;
+    width: 46.8rem;
+    height: 39.3rem;
   }
   .slider-img3 {
     margin-right: 21.8rem;
+    width: 44rem;
+    height: 38rem;
   }
   .slider-heading {
     margin-bottom: 1.6rem;
@@ -58,4 +67,15 @@
   }
 }
 .slide-1 {
+  display: none;
+}
+.slide-2 {
+  display: none;
+}
+.slide-3 {
+  display: none;
+}
+
+.active-slide {
+  display: flex;
 }
