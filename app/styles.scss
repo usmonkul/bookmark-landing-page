@@ -10,9 +10,6 @@
 
 @import "pages/home";
 
-.main-content {
-  flex-grow: 1;
-}
 // Header
 .header-section {
   padding-top: 4.8rem;
@@ -31,6 +28,9 @@
   @include list-unstyled;
   display: flex;
   align-items: center;
+  @include respond-to("small") {
+    display: none;
+  }
   .navigation-list-item:not(:last-child) {
     margin-right: 4.4rem;
   }
@@ -40,6 +40,7 @@
     line-height: 17px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    transition: color 0.2s ease-in;
     &:hover {
       color: $softRed;
     }
@@ -49,8 +50,9 @@
   }
 }
 .hamburger-menu {
+  display: none;
   @include respond-to("small") {
-    display: none;
+    display: block;
   }
 }
 
@@ -69,14 +71,25 @@
   position: absolute;
   bottom: 0;
   left: calc(50% + 200px);
+  @include respond-to("small") {
+    top: 25%;
+    left: calc(50% - 160px);
+  }
 }
 .hero-inner {
   display: flex;
   align-items: center;
   position: relative;
+  @include respond-to("small") {
+    justify-content: center;
+  }
 }
 .left-content {
   max-width: 54rem;
+  @include respond-to("small") {
+    margin-top: 350px;
+    text-align: center;
+  }
   .main-header {
     font-weight: 500;
     font-size: 4.8rem;
@@ -93,11 +106,16 @@
   }
 }
 .hero-img {
+  flex-shrink: 0;
   display: block;
   position: absolute;
   top: -90px;
   left: calc(50% + 30px);
   width: 65.7rem;
+  @include respond-to("small") {
+    top: -10%;
+    left: calc(50% - 230px);
+  }
 }
 
 // Features
@@ -237,6 +255,13 @@
   .question-wrapper {
     display: flex;
     align-items: center;
+    &:hover {
+      color: $softRed;
+      cursor: pointer;
+    }
+  }
+  .js_open_question {
+    margin-bottom: 30px;
   }
   .question {
     font-size: 18px;
@@ -244,6 +269,21 @@
   }
   .arrow-img {
     margin-left: auto;
+    stroke: $softBlue;
+  }
+  .arrow-close {
+    transform: rotate(180deg);
+    stroke: $softRed;
+  }
+  .answer {
+    font-size: 16px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    opacity: 0.75;
+    display: none;
+  }
+  .jsOpenAnswer {
+    display: block;
   }
 }
 // CTA
@@ -354,6 +394,7 @@
     font-size: 13px;
     line-height: 17px;
     letter-spacing: 1.5px;
+    transition: color 0.2s ease-in;
     &:hover {
       color: $softRed;
     }

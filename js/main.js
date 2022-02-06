@@ -42,3 +42,16 @@ tab3.addEventListener("click", function () {
   tab1.classList.remove("active-slider");
   tab2.classList.remove("active-slider");
 });
+
+// FAQ
+const elQuestionOpener = document.querySelectorAll(".question-wrapper");
+const elAnswer = document.querySelectorAll(".answer");
+const elArrowImg = document.querySelectorAll(".arrow-img");
+
+elQuestionOpener.forEach((Element, index) => {
+  Element.addEventListener("click", function () {
+    Element.classList.toggle("js_open_question");
+    elAnswer[index].classList.toggle("jsOpenAnswer");
+    elArrowImg[index].classList.toggle("arrow-close");
+  });
+});

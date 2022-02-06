@@ -1,15 +1,15 @@
 $breakpoints: (
   "xsmall": (
-    min-width: 415px,
+    max-width: 415px,
   ),
   "small": (
-    min-width: 767px,
+    max-width: 767px,
   ),
   "medium": (
-    min-width: 992px,
+    max-width: 992px,
   ),
   "large": (
-    min-width: 1200px,
+    max-width: 1200px,
   ),
 ) !default;
 

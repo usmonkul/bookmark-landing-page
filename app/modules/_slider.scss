@@ -16,7 +16,7 @@
     letter-spacing: 0.533px;
     color: $darkBlue;
     opacity: 0.75;
-    // cursor: pointer;
+    cursor: pointer;
     position: relative;
     &:hover {
       color: $softRed;
@@ -66,12 +66,8 @@
     margin-bottom: 3.2rem;
   }
 }
-.slide-1 {
-  display: none;
-}
-.slide-2 {
-  display: none;
-}
+.slide-1,
+.slide-2,
 .slide-3 {
   display: none;
 }
